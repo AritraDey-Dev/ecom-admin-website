@@ -1,11 +1,24 @@
+"use client"
+import { Modal } from '@/components/ui/modal';
+import { useeStoreModal } from '@/hooks/use-store-model';
 import { UserButton } from '@clerk/nextjs';
+import { useEffect} from 'react';
 
 function SetupPage() {
-  return (
-    <div className="p-4">
-      <UserButton afterSignOutUrl="/" />
-    </div>
-  );
+    const onOpen=useeStoreModal((state)=>state.onOpen)
+     const isOpen=useeStoreModal((state)=>state.isOpen)
+     useEffect(()=>{
+        if(!isOpen){
+            onOpen()};
+        },[])
+     
+    return (
+        <div className="p-4">
+            Root page
+        </div>
+    );
 }
 
 export default SetupPage;
+
+
