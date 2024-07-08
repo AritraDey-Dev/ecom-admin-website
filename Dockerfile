@@ -28,6 +28,10 @@ RUN npx prisma generate
 RUN npx prisma db pushpsql -U postgres
 Run npm install axios
 RUN npm install  react-hot-toast
+RUN npx shadcn-ui@latest add popover
+RUN npx shadcn-ui@latest add command
+
+
 # Copy the rest of the application code to the container
 COPY . .
 
