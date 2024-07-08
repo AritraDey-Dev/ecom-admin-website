@@ -18,7 +18,9 @@ RUN npm install @clerk/nextjs
 RUN npx shadcn-ui@latest add button
 
 RUN npx shadcn-ui@latest add dialog
-RUNnpm install zustand
+RUN npm install zustand
+RUN npx shadcn-ui@latest add form
+RUN npx shadcn-ui@latest add input
 
 # Copy the rest of the application code to the container
 COPY . .
