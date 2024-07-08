@@ -13,12 +13,9 @@ function SetupPage() {
         },[])
      
     return (
-        <div className="p-4">
-            Root page
-        </div>
+        <>  Navbar</>
     );
-}
-
+    }
 export default SetupPage;
 
 

@@ -21,7 +21,13 @@ RUN npx shadcn-ui@latest add dialog
 RUN npm install zustand
 RUN npx shadcn-ui@latest add form
 RUN npx shadcn-ui@latest add input
-
+RUN npm i -D prisma
+RUN npm install @prisma/client
+Run npx prisma init
+RUN npx prisma generate
+RUN npx prisma db pushpsql -U postgres
+Run npm install axios
+RUN npm install  react-hot-toast
 # Copy the rest of the application code to the container
 COPY . .
 
